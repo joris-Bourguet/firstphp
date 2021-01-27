@@ -1,6 +1,6 @@
 <?php
 
-include_once "Database.php";
+include "Database.php";
 
 class User
 {
@@ -15,10 +15,11 @@ class User
      * @param $password
      * @param $firstname
      */
-    public function addUser($pseudo, $email, $password, $firstname)
+    public function addUser($pseudo = "test", $email = "test@gmail.com", $password = "0123456", $firstname = "testfirstname")
     {
         $dbh = new Database();
-        $sql = $dbh->prepare("INSERT INTO user (pseudo, email, password, firstname) VALUES (:pseudo, :email, :password, :firstname)");
+        $stmt = $dbh->getConnect();
+        $sql = $stmt->prepare("INSERT INTO user (pseudo, email, password, firstname) VALUES (:pseudo, :email, :password, :firstname)");
         $sql->bindParam(':pseudo', $pseudo);
         $sql->bindParam(':email', $email);
         $sql->bindParam(':password', $password);

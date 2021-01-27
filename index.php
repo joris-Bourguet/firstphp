@@ -20,14 +20,17 @@
 
 <div class="container">
     <div class="row">
-        <button type="button" class="btn btn-outline-dark">
-            <a href="assets/php/connexion.php">Connexion à la bdd</a>
-        </button>
-    </div>
-    <div class="row">
-        <button type="button" class="btn btn-outline-dark">
-            <a href="assets/php/testUnitaire.php">Insert à la bdd</a>
-        </button>
+        <a href="assets/php/connexion.php">
+            <button type="button" class="btn btn-outline-dark">
+                Connexion à la bdd
+            </button>
+        </a>
+        &nbsp;
+        <a href="assets/php/testUnitaire.php">
+            <button type="button" class="btn btn-outline-dark">
+                Insert à la bdd
+            </button>
+        </a>
     </div>
 </div>
 
